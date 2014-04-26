@@ -1,14 +1,16 @@
 ---
 pageable: true
 per_page: 10
-hero: images/knowledge-source-background.png
+hero: images/unsplash.jpg
 logo: face
-title: Jacek Głodek’s Blog
-subtitle: My blog on software, philosophy and design.
-page_with_face: true
-shade: 0.6
----
+title: Jacek Głodek
+subtitle:
+  My blog on software, philosophy and design.<br/>
+  I am a software developer, founder of <a href="http://www.theiterators.com/" title="The Iterators - Software House webpage">Iterators</a>
 
+page_with_face: true
+shade: 0
+---
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -18,13 +20,17 @@ shade: 0.6
   <% end %>
 <% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h3><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h3>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
+<section class="articles">
+  <% page_articles.each_with_index do |article, i| %>
+    <article>
+      <span>Jacek wrote on <%= article.date.strftime("%B %e") %> <%= article.date.year if article.date.year != Date.today.year%></span>
+      <h2 class="fat"><%= link_to article.title, article %></h2>
+      <h3><%= link_to article.data.subtitle, article %></h3>
+      <% article.summary(250) %>
+      <hr/>
+    </article>
+  <% end %>
+</section>
 <% if paginate %>
   <% if next_page %>
     <p><%= link_to 'Next page', next_page %></p>
@@ -32,25 +38,17 @@ shade: 0.6
 <% end %>
 
 
-  <aside>
-    <h3>Recent Articles</h3>
-    <ol>
-      <% blog.articles[0...10].each do |article| %>
-        <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-      <% end %>
-    </ol>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'jacekglodekcom'; // required: replace example with your forum shortname
 
-    <h3>Tags</h3>
-    <ol>
-      <% blog.tags.each do |tag, articles| %>
-        <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-      <% end %>
-    </ol>
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+  var s = document.createElement('script'); s.async = true;
+  s.type = 'text/javascript';
+  s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
 
-    <h3>By Year</h3>
-    <ol>
-      <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-        <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-      <% end %>
-    </ol>
-  </aside>
+

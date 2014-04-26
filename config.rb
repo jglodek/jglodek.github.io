@@ -106,6 +106,7 @@ activate :gzip
 activate :minify_html
 
 activate :imageoptim do |options|
+  options.verbose = true
 end
 
 
