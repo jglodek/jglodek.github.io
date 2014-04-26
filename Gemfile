@@ -10,3 +10,7 @@ gem 'middleman-livereload', '~> 3.3.3'
 gem 'middleman-deploy'
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+gem 'therubyracer' # faster JS compiles
+gem "middleman-minify-html"
+gem "middleman-imageoptim"
+
