@@ -1,6 +1,6 @@
 .menu
   position: fixed
-  left: -200px
+  left: -100%
   top: 0
   width: 200px
   min-height: 100%
@@ -44,7 +44,7 @@
 
 body
   transition: margin 0.7s, padding 0.7s
-  -webkit-transition: margin 1s, padding 0.7s
+  -webkit-transition: margin 0.7s, padding 0.7s
 
 body.menu-toggled
   padding-left: 200px
@@ -55,9 +55,11 @@ body.menu-toggled
     margin-left: 20px
     opacity: 0
 
-@media(max-width: 500px)
+@media(max-width: 35em)
   body.menu-toggled
     padding-left: 100%
     margin-right: -100%
+  .menu
+    width: 100%
 
 
