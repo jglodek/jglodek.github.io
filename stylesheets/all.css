@@ -17,13 +17,17 @@
     bottom: 30px;
     width: 100%;
     height: 50%;
-    max-height: 400px; }
-    /* line 19, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
-    .hero .hero-bottom .content {
-      max-width: 700px;
-      text-align: LEFT;
-      margin: 0 auto;
-      color: white; }
+    max-height: 400px;
+    -webkit-transition: margin 1s, opacity 2s;
+    transition: margin 1s, opacity 2s; }
+  /* line 23, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  .hero .content {
+    color: white; }
+
+/* line 26, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+.hero.initial .hero-bottom {
+  margin-bottom: 50px;
+  opacity: 0; }
 /* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/menu.sass */
 .menu {
   position: absolute;
@@ -31,6 +35,15 @@
   top: 0;
   width: 180px;
   min-height: 100%; }
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/layout.sass */
+body {
+  padding-bottom: 50px; }
+
+/* line 3, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/layout.sass */
+.content {
+  max-width: 700px;
+  text-align: left;
+  margin: 0 auto; }
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 
 /* ==========================================================================

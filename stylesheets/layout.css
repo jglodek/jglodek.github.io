@@ -1,0 +1,9 @@
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/layout.sass */
+body {
+  padding-bottom: 50px; }
+
+/* line 3, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/layout.sass */
+.content {
+  max-width: 700px;
+  text-align: left;
+  margin: 0 auto; }
