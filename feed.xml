@@ -14,24 +14,27 @@
     <link rel="alternate" href="http://blog.url.com/2014/04/recommender-systems-five-charts.html"/>
     <id>http://blog.url.com/2014/04/recommender-systems-five-charts.html</id>
     <published>2014-04-26T12:17:00+02:00</published>
-    <updated>2014-04-26T20:17:30+02:00</updated>
+    <updated>2014-04-27T00:00:52+02:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h3 id="asdasda"&gt;asdasda&lt;/h3&gt;
+    <content type="html">&lt;h2 id="why-5-charts"&gt;Why 5 charts?&lt;/h2&gt;
+&lt;p&gt;I always wondered how to convey an information to a reader via blog.
+To me the long, long articles always seem to be a bad thing.
+Instead of building context and providing detailed informations,
+different mannerisms occlude the big picture (whether academic ego, startup–savvy or big enterprise BS).
+So lets get to brass tacks here — 5 charts, short descriptions, my model, my typology.
+Feel free to choose any parts you like, post your answers to the questions @jacekglodek on Twitter.&lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>Example Article</title>
-    <link rel="alternate" href="http://blog.url.com/2012/01/example-article.html"/>
-    <id>http://blog.url.com/2012/01/example-article.html</id>
-    <published>2012-01-01T01:00:00+01:00</published>
-    <updated>2014-04-26T12:14:06+02:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
+&lt;h2 id="data-information-knowledge-wisdom"&gt;Data, Information, Knowledge, Wisdom&lt;/h2&gt;
+
+&lt;h2 id="items-actions-strategies"&gt;Items, Actions, Strategies&lt;/h2&gt;
+
+&lt;h2 id="ai-and-the-sources-of-knowledge"&gt;AI and The Sources of Knowledge&lt;/h2&gt;
+
+&lt;h2 id="recommendation-environment"&gt;Recommendation Environment&lt;/h2&gt;
+
+&lt;h2 id="recommendation-mechanisms"&gt;Recommendation Mechanisms&lt;/h2&gt;
 </content>
   </entry>
 </feed>

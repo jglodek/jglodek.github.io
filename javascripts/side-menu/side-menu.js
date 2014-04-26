@@ -1,0 +1,1 @@
+(function(){$(function(){return $(".menu-button, .menu .toggle").click(function(){return $("body").toggleClass("menu-toggled")})})}).call(this);
