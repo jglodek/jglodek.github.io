@@ -5,7 +5,7 @@ hero: images/unsplash.jpg
 logo: face
 title: Jacek Głodek
 subtitle:
-  My blog on software, philosophy and design.<br/>
+  My blog on business, software, philosophy and design.<br/>
   I am a software developer, founder of <a href="http://www.theiterators.com/" title="The Iterators - Software House webpage">Iterators</a>
 
 page_with_face: true
@@ -23,11 +23,14 @@ shade: 0
 <section class="articles">
   <% page_articles.each_with_index do |article, i| %>
     <article>
+      <img src="images/face-icon.jpg" class="face-icon">
       <span>Jacek wrote on <%= article.date.strftime("%B %e") %> <%= article.date.year if article.date.year != Date.today.year%></span>
-      <h2 class="fat"><%= link_to article.title, article %></h2>
+      <span>— <%= link_to article.title, article.path+"#disqus_thread" %></span>
+      <h2 class="fat">
+        <%= link_to article.title, article %>
+      </h2>
       <h3><%= link_to article.data.subtitle, article %></h3>
       <% article.summary(250) %>
-      <hr/>
     </article>
   <% end %>
 </section>

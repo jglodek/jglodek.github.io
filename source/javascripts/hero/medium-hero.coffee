@@ -17,6 +17,8 @@ $ ->
     if windowHeight > 400
       $heroBottom.css("transform", translate3d)
       $heroBottom.css("opacity", 1-1.5*ratio)
+      #$hero.css {"-webkit-filter": "blur(#{8*ratio}px)"}
+
 
   # RESIZE BINDING
   $(window).resize -> refreshHeroHeight()
