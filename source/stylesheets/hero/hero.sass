@@ -16,8 +16,13 @@
     width: 100%
     height: 50%
     max-height: 400px
-    .content
-      width: 700px
-      text-align: LEFT
-      margin: 0 auto
-      color: white
+
+    -webkit-transition: margin 1s, opacity 2s
+    transition: margin 1s, opacity 2s
+
+  .content
+    color: white
+
+.hero.initial .hero-bottom
+  margin-bottom: 50px
+  opacity: 0

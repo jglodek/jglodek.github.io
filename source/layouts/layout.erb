@@ -1,13 +1,15 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jacek Głodek Blog <%= ' - ' + current_article.title unless current_article.nil? %></title>
 
-
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700|Lora:400,700' rel='stylesheet' type='text/css'>
-
 
   <%= stylesheet_link_tag "normalize", "all" %>
   <%= javascript_include_tag  "all" %>
@@ -15,6 +17,9 @@
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 </head>
 <body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
   <header>
     <div class="menu-button">
@@ -26,7 +31,7 @@
   </div>
 
   <% if current_page.data.hero %>
-    <div class="hero" style="background-image: url('<%= current_page.data.hero %>')">
+    <div class="hero initial" style="background-image: url('<%= current_page.data.hero %>')">
       <% if current_page.data.shade %>
         <div class="shade" style="opacity: <%= current_page.data.shade %>;<%= "background-color: #{current_page.data.tint};" if current_page.data.tint%>"></div>
       <% end %>
@@ -38,9 +43,9 @@
       </div>
     </div>
   <% end %>
-
-  <%= yield %>
-
+  <div class="content">
+    <%= yield %>
+  </div>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
