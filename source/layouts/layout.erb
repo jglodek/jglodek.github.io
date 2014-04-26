@@ -31,7 +31,7 @@
   </div>
 
   <% if current_page.data.hero %>
-    <div class="hero initial" style="background-image: url('<%= current_page.data.hero %>')">
+    <div class="hero" style="background-image: url('<%= current_page.data.hero %>')">
       <% if current_page.data.shade %>
         <div class="shade" style="opacity: <%= current_page.data.shade %>;<%= "background-color: #{current_page.data.tint};" if current_page.data.tint%>"></div>
       <% end %>

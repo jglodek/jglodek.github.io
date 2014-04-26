@@ -12,9 +12,8 @@ $ ->
     windowHeight = $(window).height()
     ratio = scrollTop/windowHeight
     translate3d = "translate3d(0px,#{ratio*300}px, 0px)"
-    heroBottom.css("-webkit-transform", translate3d)
     heroBottom.css("transform", translate3d)
-    heroBottom.css("opacity", 1-1*ratio)
+    heroBottom.css("opacity", 1-1.3*ratio)
 
   # RESIZE BINDING
   $(window).resize -> refreshHeroHeight()
@@ -23,13 +22,15 @@ $ ->
   # SCROLL BINDING
   i = 0
   $(window).scroll ->
-    if i%2 == 0
+    if i%1 == 0
       refreshHeroBottomPosition()
       i= 0
     i+=1
 
   #INITIAL CALLBACK
+  $(".hero-bottom").css({"margin-bottom": "50px", opacity: 0})
   initialCallback = ->
-    $(".hero").removeClass("initial")
+    $(".hero-bottom").animate({"margin-bottom": "0", opacity: 1}, 1000)
   setTimeout initialCallback, 100
+
 
