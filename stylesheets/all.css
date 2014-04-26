@@ -1,3 +1,36 @@
+/* line 2, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+.hero {
+  margin: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden; }
+  /* line 9, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  .hero .shade {
+    width: 100%;
+    height: 100%;
+    background: black; }
+  /* line 13, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  .hero .hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 50%;
+    max-height: 400px; }
+    /* line 19, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+    .hero .hero-bottom .content {
+      width: 700px;
+      text-align: LEFT;
+      margin: 0 auto;
+      color: white; }
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/menu.sass */
+.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  min-height: 100%; }
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -374,3 +407,25 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+body {
+  font-family: "Lora", "serif";
+  font-weight: 400; }
+
+/* line 5, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h1 {
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 700;
+  font-size: 300%;
+  color: white;
+  color: rgba(255, 255, 255, 0.8); }
+
+/* line 12, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h2 {
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 200; }
+
+/* line 16, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h3 {
+  font-family: "Lora", "serif";
+  font-weight: 400; }

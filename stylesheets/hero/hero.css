@@ -1,0 +1,26 @@
+/* line 2, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+.hero {
+  margin: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden; }
+  /* line 9, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  .hero .shade {
+    width: 100%;
+    height: 100%;
+    background: black; }
+  /* line 13, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  .hero .hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 50%;
+    max-height: 400px; }
+    /* line 19, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+    .hero .hero-bottom .content {
+      width: 700px;
+      text-align: LEFT;
+      margin: 0 auto;
+      color: white; }

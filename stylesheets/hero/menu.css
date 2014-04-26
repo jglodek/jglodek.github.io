@@ -1,0 +1,7 @@
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/menu.sass */
+.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  min-height: 100%; }

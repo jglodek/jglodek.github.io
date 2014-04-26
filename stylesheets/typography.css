@@ -1,0 +1,22 @@
+/* line 1, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+body {
+  font-family: "Lora", "serif";
+  font-weight: 400; }
+
+/* line 5, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h1 {
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 700;
+  font-size: 300%;
+  color: white;
+  color: rgba(255, 255, 255, 0.8); }
+
+/* line 12, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h2 {
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 200; }
+
+/* line 16, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/typography.sass */
+h3 {
+  font-family: "Lora", "serif";
+  font-weight: 400; }
