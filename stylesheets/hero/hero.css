@@ -5,26 +5,20 @@
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
-  overflow: hidden; }
-  /* line 9, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  overflow: hidden;
+  position: relative; }
+  /* line 10, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
   .hero .shade {
     width: 100%;
     height: 100%;
     background: black; }
-  /* line 13, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+  /* line 14, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
   .hero .hero-bottom {
     position: absolute;
     bottom: 30px;
     width: 100%;
     height: 50%;
-    max-height: 400px;
-    -webkit-transition: margin 1s, opacity 2s;
-    transition: margin 1s, opacity 2s; }
-  /* line 23, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
+    max-height: 400px; }
+  /* line 20, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
   .hero .content {
     color: white; }
-
-/* line 26, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
-.hero.initial .hero-bottom {
-  margin-bottom: 50px;
-  opacity: 0; }
