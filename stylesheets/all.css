@@ -20,7 +20,7 @@
     max-height: 400px; }
     /* line 19, /Users/jglodek/dev/jacekglodek.com/source/stylesheets/hero/hero.sass */
     .hero .hero-bottom .content {
-      width: 700px;
+      max-width: 700px;
       text-align: LEFT;
       margin: 0 auto;
       color: white; }
