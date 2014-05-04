@@ -14,11 +14,12 @@ h2
 .fat
   font-weight: 700
 
-h3
-  margin: 6px 0 6px 0
+h3, h4
+  margin: 10px 0 10px 0
   font-weight: 200
+  opacity: 0.8
 
-a
+a, a:visited
   text-decoration: none
   color: #bf7a0c
   transition: all 0.4s
@@ -27,17 +28,15 @@ a
 a:hover
   color: #ea7811
 
-a:visited
-  color: inherit
-
 
 .inverted
   color: #eee
-  text-shadow: 0 1px 2px black
+  text-shadow: 0 1px 3px black, 0 1px 1px black
   a, a:visited, a:hover
     color: #fabeaa
 
-a.round-link, a.round-link:visited
+a.round-link, a.round-link:visited, a.circle-link, a.circle-link:visited
+  font-family: 'Source Sans Pro', 'sans-serif'
   margin: 20px
   display: inline-block
   font-weight: 200
@@ -47,21 +46,29 @@ a.round-link, a.round-link:visited
   opacity: 0.7
   cursor: pointer
   color: black
-  padding: 10px 20px 13px 20px
+  padding: 10px 20px 10px 20px
   transition: all 0.3s
   -webkit-transition: all 0.3s
 
-.inverted a.round-link
-  color: white
-  border-color: white
+a.circle-link
+  margin: 10px 10px 30px 10px
+  padding: 10px 13px 10px 13px
+  span
+    font-size: 0
 
-.inverted a.round-link:hover
-  border-color: #99e307
-  color: #99e307
 
-a.round-link:hover
-  border-color: #3a5c05
-  color: #3a5c05
+.inverted
+  a.round-link, a.circle-link
+    color: white
+    border-color: white
+
+  a.round-link:hover, a.circle-link:hover
+    border-color: #99e307
+    color: #99e307
+
+a.round-link:hover, a.circle-link:hover
+  border-color: #568b08
+  color: #568b08
   opacity: 1
 
 // ARTICLES
@@ -70,6 +77,7 @@ article
   font-family: 'Lora', 'serif'
   font-weight: 400
   text-shadow: 0 2px 1px rgba(255,255,255,0.7)
+  margin-bottom: 5em
   h2, h3
     font-family: 'Lora', 'serif'
     font-weight: 700
@@ -80,5 +88,6 @@ article
     margin-top: 5px
     line-height: 180%
     color: #4e4e4e
+
 
 

@@ -2,15 +2,17 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~> 3.3.2"
-gem "middleman-blog", "~> 3.5.2"
+gem "middleman"
+gem "middleman-blog"
 
 gem 'nokogiri'
-gem 'middleman-livereload', '~> 3.3.3'
+gem 'middleman-livereload'
+
 gem 'middleman-deploy'
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 gem 'therubyracer' # faster JS compiles
+
 gem "middleman-minify-html"
 gem "middleman-imageoptim"
 

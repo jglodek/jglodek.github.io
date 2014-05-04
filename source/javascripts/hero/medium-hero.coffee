@@ -4,24 +4,28 @@ $ ->
   $document = $(document)
   $window = $(window)
 
+
   refreshHeroHeight = ->
     windowHeight = $window.height()
     targetHeight = if windowHeight > 400 then windowHeight else 400
     $hero.height(targetHeight)
+
+
 
   refreshHeroBottomPosition = ->
     scrollTop = $document.scrollTop()
     windowHeight = $window.height()
     ratio = scrollTop/windowHeight
     translate3d = "translate3d(0px,#{ratio*300}px, 0px)"
-    if windowHeight > 400
-      $heroBottom.css("transform", translate3d)
-      $heroBottom.css("opacity", 1-1.5*ratio)
-      #$hero.css {"-webkit-filter": "blur(#{8*ratio}px)"}
+    $heroBottom.css("transform", translate3d)
+    $heroBottom.css("opacity", 1-1.5*ratio)
+    #$hero.css {"-webkit-filter": "blur(#{8*ratio}px)"}
 
 
   # RESIZE BINDING
-  $(window).resize -> refreshHeroHeight()
+  $(window).resize ->
+    refreshHeroHeight()
+
   refreshHeroHeight()
 
 

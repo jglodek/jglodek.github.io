@@ -1,6 +1,6 @@
 .menu
   position: fixed
-  left: -100%
+  left: -200px
   top: 0
   width: 200px
   min-height: 100%
@@ -8,6 +8,7 @@
   color: white
   transition: all 0.7s
   -webkit-transition: all 0.7s
+  z-index: 9999
   ul
     padding: 0
     padding-top: 10px
@@ -42,13 +43,7 @@
   height: 50px
   z-index: 9999
 
-body
-  transition: margin 0.7s, padding 0.7s
-  -webkit-transition: margin 0.7s, padding 0.7s
-
 body.menu-toggled
-  padding-left: 200px
-  margin-right: -200px
   .menu
     left: 0
   .menu-button
@@ -56,10 +51,8 @@ body.menu-toggled
     opacity: 0
 
 @media(max-width: 35em)
-  body.menu-toggled
-    padding-left: 100%
-    margin-right: -100%
   .menu
+    left: -100%
     width: 100%
 
 
