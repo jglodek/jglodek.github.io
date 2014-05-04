@@ -1,0 +1,1 @@
+(function(){$(function(){return $(".font-size-toggle").click(function(){return $("body").toggleClass("big-font")})})}).call(this);
