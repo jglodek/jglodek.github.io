@@ -18,6 +18,13 @@
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 </head>
 <body>
+
+  <div class="accessibility">
+    Accessibility:
+    <a href="#maincontent" class="go-to-content">Skip to content</a> |
+    <a href="#" class="font-size-toggle">Toggle font size</a>
+  </div>
+
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -50,7 +57,7 @@
       <% end %>
       <% if current_page.data.page_with_face %>
         <div class="hero-bottom withface">
-          <div class="content" style="text-align: center">
+          <div id="maincontent" class="content" style="text-align: center">
             <div class="face">
               <img src="/images/face.jpeg">
             </div>
