@@ -18,7 +18,7 @@ $ ->
     ratio = scrollTop/windowHeight
     translate3d = "translate3d(0px,#{ratio*300}px, 0px)"
     $heroBottom.css("transform", translate3d)
-    $heroBottom.css("opacity", 1-1.5*ratio)
+    $heroBottom.css("opacity", 1.5-1.5*ratio)
     #$hero.css {"-webkit-filter": "blur(#{8*ratio}px)"}
 
 
