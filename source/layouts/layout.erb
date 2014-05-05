@@ -7,8 +7,10 @@
   <meta charset="utf-8" />
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+
   <% title = "Jacek Głodek"  %>
-  <% title += ' - ' + current_article.title.gsub(/<.+>/,"") unless current_article.nil? %>
+  <% title += ' - ' + current_article.title.gsub(/<.+>/,"") unless current_article.nil? || current_article.title.nil?%>
+
   <title><%= title %></title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700|Lora:400,700' rel='stylesheet' type='text/css'>
@@ -17,14 +19,14 @@
   <%= stylesheet_link_tag "normalize", "all" %>
   <%= javascript_include_tag  "all" %>
 
-  <link rel="canonical" href="https://jacekglodek.com/">
+  <link rel="canonical" href="http://www.jacekglodek.com/">
   <meta name="title" content="<%= title %>">
 
   <meta property="og:site_name" content="Jacek Głodek">
   <meta property="og:title" content="<%= title %>">
   <meta property="og:url" content="<%= current_page.url%>">
   <meta property="og:image" content="<%= current_page.data.hero%>">
-  <meta property="og:description" content="<%= current_page.data.subtitle %>. An article from Jacek Glodek's blog.">
+  <meta property="og:description" content="<%= current_page.data.subtitle.gsub(/<.+>/,"") unless !current_page.data.subtitle %>. An article from Jacek Glodek's blog.">
   <% if current_article %>
     <meta property="og:type" content="article">
   <% else %>
@@ -33,8 +35,8 @@
   <meta name="twitter:site" content="@jacekglodek">
   <meta name="twitter:creator" content="@jacekglodek">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:card" content="<%= current_page.data.title %>">
-  <meta name="twitter:description" content="<%= current_page.data.subtitle %>. An article from Jacek Glodek's blog.">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= current_page.data.subtitle.gsub(/<.+>/,"") unless !current_page.data.subtitle  %>. An article from Jacek Glodek's blog.">
   <meta name="twitter:image" content="<%= current_page.data.hero %>">
   <link rel="publisher" href="https://plus.google.com/+JacekGłodek">
 
